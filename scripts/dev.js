@@ -10,7 +10,7 @@ bs.init({
   },
 });
 
-bs.watch("src/**/*.ts?", function (event, file) {
+bs.watch("src/**/*.*", function (event, file) {
   build(options)
     .then(() => bs.reload())
     .catch(() => process.exit(1));
