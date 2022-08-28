@@ -1,0 +1,41 @@
+{
+  "name": "qrcg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:prod": "cross-env NODE_ENV=production node scripts/build.js",
+    "build": "cross-env NODE_ENV=development node scripts/build.js",
+    "start": "cross-env NODE_ENV=development node scripts/dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VolodymyrVoronov/qrcg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VolodymyrVoronov/qrcg/issues"
+  },
+  "homepage": "https://github.com/VolodymyrVoronov/qrcg#readme",
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "browser-sync": "^2.27.10",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.15.5",
+    "esbuild-css-modules-plugin": "^2.5.2",
+    "esbuild-postcss": "^0.0.4",
+    "eslint": "^8.23.0",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-reset": "^4.4.2",
+    "uninstall": "^0.0.0"
+  }
+}
