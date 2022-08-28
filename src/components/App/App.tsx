@@ -3,7 +3,7 @@ import cn from "classnames";
 
 import Paths from "../../const/paths";
 
-import StartPage from "../../pages/StartPage/StartPage";
+import MainPage from "../../pages/MainPage/MainPage";
 
 import { IAppProps } from "./App.props";
 
@@ -16,7 +16,7 @@ export const App: FC<IAppProps> = ({
 }): JSX.Element => {
   return (
     <div className={cn(styles.appContainer, className)} {...props}>
-      <StartPage />
+      <MainPage />
     </div>
   );
 };

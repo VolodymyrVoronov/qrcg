@@ -1,5 +1,5 @@
 enum Paths {
-  StartPage = "/start",
+  MainPage = "/start",
   NoPage = "*",
 }
 
