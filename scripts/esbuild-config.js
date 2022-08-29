@@ -1,4 +1,5 @@
 const cssModulesPlugin = require("esbuild-css-modules-plugin");
+const InlineCSSPlugin = require("esbuild-plugin-inline-css");
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -13,5 +14,6 @@ module.exports = {
       inject: true, // optional. set to false to not inject generated CSS into <head>, default is true
       localsConvention: "camelCaseOnly", // optional. value could be one of 'camelCaseOnly', 'camelCase', 'dashes', 'dashesOnly', default is 'camelCaseOnly'
     }),
+    InlineCSSPlugin(),
   ],
 };

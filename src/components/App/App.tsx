@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import cn from "classnames";
 
-import Paths from "../../const/paths";
-
 import MainPage from "../../pages/MainPage/MainPage";
 
 import { IAppProps } from "./App.props";

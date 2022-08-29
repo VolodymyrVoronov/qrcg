@@ -4,6 +4,8 @@ import { Reset } from "styled-reset";
 
 import { App } from "./components/App/App";
 
+import "./index.css";
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
