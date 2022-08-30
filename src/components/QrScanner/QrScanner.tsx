@@ -52,11 +52,11 @@ const QrScanner = (): JSX.Element => {
           </div>
           <div className={styles.qrScannerContainer}>
             <QsS
+              className={styles.qrScannerBox}
               onScan={handleScan}
               onError={handleError}
-              on
+              flipHorizontally={true}
               video={{ width: "100%", height: "100%" }}
-              className={styles.qrScannerBox}
             />
           </div>
         </motion.div>
