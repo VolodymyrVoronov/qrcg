@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import cn from "classnames";
 
 import { ITabsProps } from "./Tabs.props";
+import Tab from "../Tab/Tab";
 
 import styles from "./Tabs.module.css";
-import Tab from "../Tab/Tab";
 
 const Tabs: FC<ITabsProps> = ({ tabs, className, ...props }): JSX.Element => {
   const [activeTab, setActiveTab] = useState("tab1");
