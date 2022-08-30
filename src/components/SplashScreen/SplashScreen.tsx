@@ -9,7 +9,7 @@ const SplashScreen = (): JSX.Element => {
         <img
           className={styles.splashIcon}
           src="assets/images/qr-code-icon-01.png"
-          alt="qr code icon"
+          alt="Qr Code Icon"
         />
       </div>
     </div>

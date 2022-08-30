@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 
 import SplashScreen from "../../components/SplashScreen/SplashScreen";
+import Tabs from "./../../components/Tabs/Tabs";
 
 import styles from "./MainPage.module.css";
 
@@ -28,13 +29,50 @@ const MainPage = (): JSX.Element => {
     };
   }, []);
 
+  const tabs = [
+    {
+      tabId: "tab1",
+      tabName: "Create",
+      iconSrc: "assets/images/create-icon-01.png",
+      render: () => (
+        <div>
+          Create{" "}
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
+            ullam unde vero est in doloribus doloremque consequuntur rem
+            officia. Possimus ex nulla pariatur molestias, suscipit in fuga
+            optio provident delectus!
+          </p>
+        </div>
+      ),
+    },
+    {
+      tabId: "tab2",
+      tabName: "Scan",
+      iconSrc: "assets/images/scan-qr-code-icon-01.png",
+      render: () => (
+        <div>
+          Scan{" "}
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            veniam dolore asperiores molestiae? Earum vitae placeat voluptatibus
+            perspiciatis dicta eligendi veritatis optio quaerat. Libero quas
+            voluptate nulla alias omnis aut!
+          </p>
+        </div>
+      ),
+    },
+  ];
+
   return (
     <div
       className={cn(styles.mainPage, {
-        [styles.mainPageBoxCenter]: !showTabs,
+        // [styles.mainPageBoxCenter]: !showTabs,
       })}
     >
-      <AnimatePresence>
+      <Tabs tabs={tabs} className={styles.mainPageTabs} />
+
+      {/* <AnimatePresence>
         {showSplashScreen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -54,15 +92,10 @@ const MainPage = (): JSX.Element => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2.5 }}
           >
-            <div>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              itaque debitis, labore repellendus in ipsa doloremque quaerat! Ea
-              quas blanditiis, amet veritatis veniam asperiores quae iusto et
-              pariatur quo! Provident!
-            </div>
+            <Tabs tabs={tabs} className={styles.mainPageTabs} />
           </motion.div>
         </AnimatePresence>
-      )}
+      )} */}
     </div>
   );
 };
