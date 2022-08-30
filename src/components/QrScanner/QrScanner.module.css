@@ -1,0 +1,111 @@
+.qrScannerResult {
+  display: flex;
+  justify-content: center;
+}
+
+.qrScannerContainer {
+  margin-top: 25px;
+}
+
+.qrScannerBox {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 25px;
+}
+
+.qrScannerBox section {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+
+  border-radius: 25px;
+}
+
+.qrScannerBox section video {
+  border-radius: 25px;
+}
+
+.qrScannerBox section div {
+  border-radius: 25px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .qrScannerBox {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .qrScannerBox {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.qrScannerResult {
+  display: block;
+
+  height: 50px;
+
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+  .qrScannerResult {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.qrScannerResultLink {
+  color: rgba(0, 0, 0, 0.8);
+
+  text-decoration: none;
+  list-style: none;
+
+  transition: all 0.5s ease;
+}
+
+.qrScannerResultLink:hover {
+  color: rgb(75, 43, 255);
+
+  box-shadow: 0 2px 0 rgb(75, 43, 255);
+}
+
+.qrScannerStartScanButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 250px;
+  height: 250px;
+
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+}
+
+.qrScannerStartScanButton:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+
+  transform: scale(1.1) !important;
+}

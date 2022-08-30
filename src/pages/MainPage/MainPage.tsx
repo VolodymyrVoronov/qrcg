@@ -4,6 +4,7 @@ import cn from "classnames";
 
 import SplashScreen from "../../components/SplashScreen/SplashScreen";
 import Tabs from "./../../components/Tabs/Tabs";
+import QrScanner from "../../components/QrScanner/QrScanner";
 
 import styles from "./MainPage.module.css";
 
@@ -50,17 +51,7 @@ const MainPage = (): JSX.Element => {
       tabId: "tab2",
       tabName: "Scan",
       iconSrc: "assets/images/scan-qr-code-icon-01.png",
-      render: () => (
-        <div>
-          Scan{" "}
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            veniam dolore asperiores molestiae? Earum vitae placeat voluptatibus
-            perspiciatis dicta eligendi veritatis optio quaerat. Libero quas
-            voluptate nulla alias omnis aut!
-          </p>
-        </div>
-      ),
+      render: () => <QrScanner />,
     },
   ];
 
