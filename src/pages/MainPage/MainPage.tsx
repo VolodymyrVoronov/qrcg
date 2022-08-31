@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 
 import SplashScreen from "../../components/SplashScreen/SplashScreen";
-import Tabs from "./../../components/Tabs/Tabs";
+import Tabs from "../../components/Tabs/Tabs";
 import QrScanner from "../../components/QrScanner/QrScanner";
 
 import styles from "./MainPage.module.css";
