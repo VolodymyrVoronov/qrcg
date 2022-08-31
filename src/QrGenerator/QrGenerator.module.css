@@ -6,6 +6,14 @@
   width: 100%;
 }
 
+.qrGeneratorSettingBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 768px;
+}
+
 .qrGeneratorCodeBox {
   align-self: center;
 

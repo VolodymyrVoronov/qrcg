@@ -21,6 +21,7 @@
   "homepage": "https://github.com/VolodymyrVoronov/qrcg#readme",
   "devDependencies": {
     "@types/react": "^18.0.17",
+    "@types/react-color": "^3.0.6",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
@@ -37,6 +38,7 @@
     "framer-motion": "^7.2.1",
     "immer": "^9.0.15",
     "react": "^18.2.0",
+    "react-color": "^2.19.3",
     "react-dom": "^18.2.0",
     "react-qr-code": "^2.0.7",
     "react-qrcode-scanner": "^1.0.2",
