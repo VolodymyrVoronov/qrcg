@@ -16,13 +16,13 @@ const Input: FC<IInputProps> = ({ className, ...props }): JSX.Element => {
 
   return (
     <div className={cn(styles.inputContainer, className)} {...props}>
-      <p className={styles.inputTip}>URL</p>
       <input
         type="text"
         value={value}
         onChange={(e) => onInputChange(e)}
         className={styles.inputField}
         placeholder="Hi there!"
+        autoFocus
       />
     </div>
   );

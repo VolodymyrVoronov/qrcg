@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
 
-  width: 768px;
+  width: 300px;
 }
 
 .qrGeneratorCodeBox {
@@ -23,4 +23,16 @@
   background-color: rgba(255, 255, 255, 0.5);
 
   border-radius: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .qrGeneratorSettingBox {
+    width: 700px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .qrGeneratorSettingBox {
+    width: 992px;
+  }
 }

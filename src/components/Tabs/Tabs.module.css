@@ -7,6 +7,8 @@
 .tabsButtons {
   display: flex;
   flex-direction: row;
+
+  width: 300px;
 }
 
 .tabsContent {
@@ -19,13 +21,15 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .tabsButtons,
   .tabsContent {
     width: 700px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  .tabsButtons,
   .tabsContent {
-    width: 1200px;
+    width: 1180px;
   }
 }
