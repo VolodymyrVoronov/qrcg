@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { QrScanner as QsS } from "react-qrcode-scanner";
+import { QrScanner as ReactQrCodeScanner } from "react-qrcode-scanner";
 import { motion } from "framer-motion";
 
 import styles from "./QrScanner.module.css";
@@ -50,13 +50,15 @@ const QrScanner = (): JSX.Element => {
               </motion.a>
             )}
           </div>
+
           <div className={styles.qrScannerContainer}>
-            <QsS
-              className={styles.qrScannerBox}
+            <ReactQrCodeScanner
               onScan={handleScan}
               onError={handleError}
+              facingMode="face"
               flipHorizontally={true}
               video={{ width: "100%", height: "100%" }}
+              className={styles.qrScannerBox}
             />
           </div>
         </motion.div>
@@ -69,7 +71,7 @@ const QrScanner = (): JSX.Element => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Start Scan
+          Start
         </motion.button>
       )}
     </>
