@@ -56,9 +56,8 @@ const QrScanner = (): JSX.Element => {
               onScan={handleScan}
               onError={handleError}
               video={{ width: "100%", height: "100%" }}
-              facingMode="face"
+              facingMode="environment"
               flipHorizontally={true}
-              video={{ width: "100%", height: "100%" }}
               className={styles.qrScannerBox}
             />
           </div>

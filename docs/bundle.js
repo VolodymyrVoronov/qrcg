@@ -41384,7 +41384,7 @@
   var import_react34 = __toESM(require_react());
   var import_classnames = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-19660-DvLb0ZIrHZx4\qrcg\src\components\Tab\Tab.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-W8f4oTH7rbZ3\qrcg\src\components\Tab\Tab.module.css.js
   var digest = "f4e308b5c176ed4226475732db29369d39eef01cab9a6522fe3228859c522a4f";
   var css = `._tabButton_1ows7_1 {
   display: flex;
@@ -41501,7 +41501,7 @@
   };
   var Tab_default = Tab;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-19660-a0RIaff6uBtw\qrcg\src\components\Tabs\Tabs.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-nuibCt8QNP3G\qrcg\src\components\Tabs\Tabs.module.css.js
   var digest2 = "49da1a167085452dd028050e1b48f48753fbf481b71e2bf70c09fddb8655a353";
   var css2 = `._tabsContainer_1lk2y_1 {
   display: flex;
@@ -41655,7 +41655,7 @@
     return import_react36.default.createElement("section", { className: m2, style: v2 }, import_react36.default.createElement("section", { style: I2 }, g2 ? import_react36.default.createElement("div", { style: x2 }) : null, import_react36.default.createElement("video", { style: U2, ref: D2("preview") }), import_react36.default.createElement("canvas", { style: { display: "none" }, ref: D2("canvas") })));
   };
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-19660-xEliHXFLRQMg\qrcg\src\components\QrScanner\QrScanner.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-xviEOAICPw0k\qrcg\src\components\QrScanner\QrScanner.module.css.js
   var digest3 = "0cd6bbfb0e88f29f97645c49146ade768d8f7bb24b7b9f09ee125418dcb9393b";
   var css3 = `._qrScannerResult_qakdg_1 {
   display: flex;
@@ -41820,9 +41820,9 @@
     }, /* @__PURE__ */ import_react37.default.createElement(r2, {
       onScan: handleScan,
       onError: handleError,
-      facingMode: "face",
-      flipHorizontally: true,
       video: { width: "100%", height: "100%" },
+      facingMode: "environment",
+      flipHorizontally: true,
       className: QrScanner_module_css_default.qrScannerBox
     }))) : /* @__PURE__ */ import_react37.default.createElement(motion.button, {
       className: QrScanner_module_css_default.qrScannerStartScanButton,
@@ -41835,7 +41835,7 @@
   };
   var QrScanner_default = QrScanner;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-19660-i7ghHFo1DrWx\qrcg\src\pages\MainPage\MainPage.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-1CxzmwAgyGqZ\qrcg\src\pages\MainPage\MainPage.module.css.js
   var digest4 = "ac03ecd9db01a6e3b348a49e69a3eb532a673856d16436710d0c00736d04373a";
   var css4 = `._mainPage_1uh8n_1 {
   display: flex;
@@ -41906,7 +41906,7 @@
   };
   var MainPage_default = MainPage;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-19660-eyXcWbobpV1U\qrcg\src\components\App\App.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-Purvv8ocqQH7\qrcg\src\components\App\App.module.css.js
   var digest5 = "13b859607ab1ae893a37437c6de0ed6ffd51f2bd9e3c3aae22093b2fe6840869";
   var css5 = `._appContainer_17u34_1 {
   width: 100%;
