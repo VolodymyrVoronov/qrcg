@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/index.css"],
-  "sourcesContent": ["#root {\r\n  height: 100vh;\r\n\r\n  background: red;\r\n}"],
-  "mappings": ";AAAA;AACE;AAEA;AAAA;",
-  "names": []
-}
