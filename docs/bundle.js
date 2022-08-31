@@ -1031,7 +1031,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
-          function useReducer(reducer, initialArg, init) {
+          function useReducer2(reducer, initialArg, init) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useReducer(reducer, initialArg, init);
           }
@@ -1825,7 +1825,7 @@
           exports.useInsertionEffect = useInsertionEffect2;
           exports.useLayoutEffect = useLayoutEffect2;
           exports.useMemo = useMemo5;
-          exports.useReducer = useReducer;
+          exports.useReducer = useReducer2;
           exports.useRef = useRef9;
           exports.useState = useState5;
           exports.useSyncExternalStore = useSyncExternalStore;
@@ -41384,8 +41384,8 @@
   var import_react34 = __toESM(require_react());
   var import_classnames = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-W8f4oTH7rbZ3\qrcg\src\components\Tab\Tab.module.css.js
-  var digest = "f4e308b5c176ed4226475732db29369d39eef01cab9a6522fe3228859c522a4f";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-3816-7jOnAAsK2rIa\qrcg\src\components\Tab\Tab.module.css.js
+  var digest = "b51785b904f26d15c1fe2514201aec11fecc67e4c3972d552f06bd82befa74da";
   var css = `._tabButton_1ows7_1 {
   display: flex;
   justify-content: center;
@@ -41501,8 +41501,8 @@
   };
   var Tab_default = Tab;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-nuibCt8QNP3G\qrcg\src\components\Tabs\Tabs.module.css.js
-  var digest2 = "49da1a167085452dd028050e1b48f48753fbf481b71e2bf70c09fddb8655a353";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-3816-tpoIWnXnBgzy\qrcg\src\components\Tabs\Tabs.module.css.js
+  var digest2 = "16d26f6852e532360d19530a7aae0f94917ec556f97b11a9e6f07746ffd6c68e";
   var css2 = `._tabsContainer_1lk2y_1 {
   display: flex;
   flex-direction: column;
@@ -41655,8 +41655,8 @@
     return import_react36.default.createElement("section", { className: m2, style: v2 }, import_react36.default.createElement("section", { style: I2 }, g2 ? import_react36.default.createElement("div", { style: x2 }) : null, import_react36.default.createElement("video", { style: U2, ref: D2("preview") }), import_react36.default.createElement("canvas", { style: { display: "none" }, ref: D2("canvas") })));
   };
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-xviEOAICPw0k\qrcg\src\components\QrScanner\QrScanner.module.css.js
-  var digest3 = "0cd6bbfb0e88f29f97645c49146ade768d8f7bb24b7b9f09ee125418dcb9393b";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-3816-H4Q5bf2hsLQs\qrcg\src\components\QrScanner\QrScanner.module.css.js
+  var digest3 = "6d328941003c4326d76917a753fc0f7e1a11fb08cc8a664c4dc0001e95712c6a";
   var css3 = `._qrScannerResult_qakdg_1 {
   display: flex;
   justify-content: center;
@@ -41786,6 +41786,14 @@
   var QrScanner = () => {
     const [qrCodeValue, setQrCodeValue] = (0, import_react37.useState)("");
     const [startScan, setStartScan] = (0, import_react37.useState)(false);
+    const [facingMode, setFacingMode] = (0, import_react37.useState)(false);
+    const [_2, forceUpdate] = (0, import_react37.useReducer)((x2) => x2 + 1, 0);
+    (0, import_react37.useEffect)(() => {
+      forceUpdate();
+    }, [facingMode]);
+    const switchFacingMode = () => {
+      setFacingMode(!facingMode);
+    };
     const handleScan = (value) => {
       setQrCodeValue(value);
     };
@@ -41806,7 +41814,10 @@
       initial: { opacity: 0, scale: 0.5 },
       animate: { opacity: 1, scale: 1 },
       transition: { duration: 0.5 }
-    }, /* @__PURE__ */ import_react37.default.createElement("div", {
+    }, /* @__PURE__ */ import_react37.default.createElement("button", {
+      type: "button",
+      onClick: switchFacingMode
+    }, "Switch facing mode"), /* @__PURE__ */ import_react37.default.createElement("div", {
       className: QrScanner_module_css_default.qrScannerResult
     }, qrCodeValue && /* @__PURE__ */ import_react37.default.createElement(motion.a, {
       variants: qrCodeValueAnimation,
@@ -41821,8 +41832,8 @@
       onScan: handleScan,
       onError: handleError,
       video: { width: "100%", height: "100%" },
-      facingMode: "environment",
-      flipHorizontally: true,
+      facingMode: facingMode ? "face" : "environment",
+      flipHorizontally: facingMode ? false : true,
       className: QrScanner_module_css_default.qrScannerBox
     }))) : /* @__PURE__ */ import_react37.default.createElement(motion.button, {
       className: QrScanner_module_css_default.qrScannerStartScanButton,
@@ -41835,7 +41846,7 @@
   };
   var QrScanner_default = QrScanner;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-1CxzmwAgyGqZ\qrcg\src\pages\MainPage\MainPage.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-3816-1kKAmbHQ3sbU\qrcg\src\pages\MainPage\MainPage.module.css.js
   var digest4 = "ac03ecd9db01a6e3b348a49e69a3eb532a673856d16436710d0c00736d04373a";
   var css4 = `._mainPage_1uh8n_1 {
   display: flex;
@@ -41906,7 +41917,7 @@
   };
   var MainPage_default = MainPage;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-4292-Purvv8ocqQH7\qrcg\src\components\App\App.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-3816-AZ2DJwCvLz9L\qrcg\src\components\App\App.module.css.js
   var digest5 = "13b859607ab1ae893a37437c6de0ed6ffd51f2bd9e3c3aae22093b2fe6840869";
   var css5 = `._appContainer_17u34_1 {
   width: 100%;
