@@ -1,0 +1,12 @@
+.qrGeneratorContainer {
+  margin-top: 25px;
+}
+
+.qrGeneratorCodeBox {
+  margin-bottom: 50px;
+  padding: 25px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border-radius: 25px;
+}
