@@ -7,6 +7,11 @@ import styles from "./QrScanner.module.css";
 const QrScanner = (): JSX.Element => {
   const [qrCodeValue, setQrCodeValue] = useState("");
   const [startScan, setStartScan] = useState(false);
+  const [facingMode, setFacingMode] = useState(false);
+
+  const switchFacingMode = () => {
+    setFacingMode(!facingMode);
+  };
 
   const handleScan = (value: string): void => {
     setQrCodeValue(value);
@@ -36,6 +41,9 @@ const QrScanner = (): JSX.Element => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
+          <button type="button" onClick={switchFacingMode}>
+            Switch facing mode
+          </button>
           <div className={styles.qrScannerResult}>
             {qrCodeValue && (
               <motion.a
@@ -56,8 +64,8 @@ const QrScanner = (): JSX.Element => {
               onScan={handleScan}
               onError={handleError}
               video={{ width: "100%", height: "100%" }}
-              facingMode="environment"
-              flipHorizontally={true}
+              facingMode={facingMode ? "face" : "environment"}
+              flipHorizontally={facingMode ? false : true}
               className={styles.qrScannerBox}
             />
           </div>
