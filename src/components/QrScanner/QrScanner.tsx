@@ -55,6 +55,7 @@ const QrScanner = (): JSX.Element => {
             <ReactQrCodeScanner
               onScan={handleScan}
               onError={handleError}
+              video={{ width: "100%", height: "100%" }}
               facingMode="face"
               flipHorizontally={true}
               video={{ width: "100%", height: "100%" }}
