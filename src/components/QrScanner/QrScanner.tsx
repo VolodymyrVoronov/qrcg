@@ -11,10 +11,12 @@ const QrScanner = (): JSX.Element => {
   const [startScan, setStartScan] = useState(false);
 
   const handleScan = (value: string): void => {
+    setQrCodeValue("");
     setQrCodeValue(value);
   };
 
   const handleError = (error: string): void => {
+    setQrCodeValue("");
     console.log({ error });
   };
 
