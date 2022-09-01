@@ -23,8 +23,8 @@ const MainPage = (): JSX.Element => {
         setShowTabs(true);
 
         clearTimeout(timerTabs);
-      }, 5000);
-    }, 5000);
+      }, 2750);
+    }, 2500);
 
     return () => {
       clearTimeout(timerSplash);
@@ -49,18 +49,16 @@ const MainPage = (): JSX.Element => {
   return (
     <div
       className={cn(styles.mainPage, {
-        // [styles.mainPageBoxCenter]: !showTabs,
+        [styles.mainPageBoxCenter]: !showTabs,
       })}
     >
-      <Tabs tabs={tabs} className={styles.mainPageTabs} />
-
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {showSplashScreen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 5 }}
+            transition={{ duration: 2.5 }}
           >
             <SplashScreen />
           </motion.div>
@@ -77,7 +75,7 @@ const MainPage = (): JSX.Element => {
             <Tabs tabs={tabs} className={styles.mainPageTabs} />
           </motion.div>
         </AnimatePresence>
-      )} */}
+      )}
     </div>
   );
 };
