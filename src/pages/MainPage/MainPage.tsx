@@ -3,8 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
 
 import SplashScreen from "../../components/SplashScreen/SplashScreen";
-import Tabs from "./../../components/Tabs/Tabs";
+import Tabs from "../../components/Tabs/Tabs";
 import QrScanner from "../../components/QrScanner/QrScanner";
+import QrGenerator from "../../QrGenerator/QrGenerator";
 
 import styles from "./MainPage.module.css";
 
@@ -35,17 +36,7 @@ const MainPage = (): JSX.Element => {
       tabId: "tab1",
       tabName: "Create",
       iconSrc: "assets/images/create-icon-01.png",
-      render: () => (
-        <div>
-          Create{" "}
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem
-            ullam unde vero est in doloribus doloremque consequuntur rem
-            officia. Possimus ex nulla pariatur molestias, suscipit in fuga
-            optio provident delectus!
-          </p>
-        </div>
-      ),
+      render: () => <QrGenerator />,
     },
     {
       tabId: "tab2",

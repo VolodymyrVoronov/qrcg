@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import cn from "classnames";
 
 import { ITabsProps } from "./Tabs.props";
+
 import Tab from "../Tab/Tab";
 
 import styles from "./Tabs.module.css";

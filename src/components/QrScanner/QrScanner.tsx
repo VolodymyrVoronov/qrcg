@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { QrScanner as ReactQrCodeScanner } from "react-qrcode-scanner";
 import { motion } from "framer-motion";
+
+import validURL from "../../helpers/valideURL";
 
 import styles from "./QrScanner.module.css";
 
@@ -28,6 +30,8 @@ const QrScanner = (): JSX.Element => {
     },
   };
 
+  const isQrCodeContainsURL = validURL(qrCodeValue);
+
   return (
     <>
       {startScan ? (
@@ -37,7 +41,7 @@ const QrScanner = (): JSX.Element => {
           transition={{ duration: 0.5 }}
         >
           <div className={styles.qrScannerResult}>
-            {qrCodeValue && (
+            {qrCodeValue && isQrCodeContainsURL ? (
               <motion.a
                 variants={qrCodeValueAnimation}
                 initial="hidden"
@@ -48,6 +52,15 @@ const QrScanner = (): JSX.Element => {
               >
                 {qrCodeValue}
               </motion.a>
+            ) : (
+              <motion.p
+                variants={qrCodeValueAnimation}
+                initial="hidden"
+                animate="show"
+                className={styles.qrScannerResultText}
+              >
+                {qrCodeValue}
+              </motion.p>
             )}
           </div>
 

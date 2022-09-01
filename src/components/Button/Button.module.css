@@ -1,0 +1,53 @@
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  margin: 0 10px;
+  padding: 15px 10px;
+
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .buttonBox {
+    margin: 0 15px;
+    padding: 20px 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .buttonBox {
+    margin: 0 20px;
+    padding: 25px 30px;
+  }
+}
+
+.buttonBox:first-child {
+  margin-left: 0;
+}
+
+.buttonBox:last-child {
+  margin-right: 0;
+}
+
+.buttonBox:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.buttonBoxActive {
+  background-color: rgba(255, 255, 255, 0.7);
+}
