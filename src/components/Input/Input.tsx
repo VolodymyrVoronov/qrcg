@@ -21,7 +21,7 @@ const Input: FC<IInputProps> = ({ className, ...props }): JSX.Element => {
         value={value}
         onChange={(e) => onInputChange(e)}
         className={styles.inputField}
-        placeholder="Hi there!"
+        placeholder="URL"
         autoFocus
       />
     </div>

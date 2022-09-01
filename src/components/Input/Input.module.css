@@ -18,7 +18,7 @@
 .inputField {
   width: 85%;
 
-  padding: 25px 20px 20px 20px;
+  padding: 15px 10px 10px 10px;
 
   font-family: "Chakra Petch", sans-serif;
   font-size: 18px;
@@ -39,6 +39,16 @@
 @media only screen and (min-width: 768px) {
   .inputField {
     width: 100%;
+
+    padding: 20px 15px 15px 15px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .inputField {
+    width: 100%;
+
+    padding: 25px 20px 20px 20px;
   }
 }
 

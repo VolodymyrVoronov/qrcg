@@ -1,17 +1,24 @@
 import create from "zustand";
 import produce from "immer";
 
+export enum QRCodeSize {
+  XS = 128,
+  SM = 256,
+  MD = 512,
+  LG = 1024,
+}
+
 export interface IStore {
   value: string;
-  size: 128 | 256 | 512 | 1024;
+  size: QRCodeSize;
 
   setValue: (value: string) => void;
   setSize: (size: number) => void;
 }
 
 const useQrGeneratorStore = create<IStore>((set) => ({
-  value: "Hi there!",
-  size: 128,
+  value: "URL",
+  size: QRCodeSize.XS,
 
   setValue: (value: string): void => {
     set(

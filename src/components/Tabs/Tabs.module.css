@@ -17,13 +17,15 @@
 
   width: 300px;
 
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 @media only screen and (min-width: 768px) {
   .tabsButtons,
   .tabsContent {
     width: 700px;
+
+    margin-top: 50px;
   }
 }
 
