@@ -20,7 +20,7 @@ const QrGenerator = (): JSX.Element => {
   const { width } = useWindowSize();
 
   useEffect(() => {
-    if (width <= 327) {
+    if (width <= 375) {
       setSize(QRCodeSize.XS);
     }
 
