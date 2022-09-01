@@ -43513,8 +43513,8 @@
   // src/components/SplashScreen/SplashScreen.tsx
   var import_react34 = __toESM(require_react());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-bG0hRZbHFwhh\qrcg\src\components\SplashScreen\SplashScreen.module.css.js
-  var digest = "6bb3d0b44e6e062c1ca044f66ded8d424354e5e791c47c68ec6900eedac14f53";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-IUd5hjrXsSWU\qrcg\src\components\SplashScreen\SplashScreen.module.css.js
+  var digest = "5fc658b4e3e705045119260eec4b7b2a6087f140be97e2ccd516c736a99057d5";
   var css = `._splashBox_nm52j_1 {
   display: flex;
   justify-content: center;
@@ -43619,8 +43619,8 @@
   var import_react35 = __toESM(require_react());
   var import_classnames = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-kI2ytspmb3Gf\qrcg\src\components\Tab\Tab.module.css.js
-  var digest2 = "731c87664533766862ea449e158172c4ae89a9b0838246feb101d7713953832f";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-MBP0mj89Qekc\qrcg\src\components\Tab\Tab.module.css.js
+  var digest2 = "1a0148bef50cc55ec2c952fb914eeb55315cb88e623cc478ae3a0288a3ce4d2a";
   var css2 = `._tabButton_18ik0_1 {
   display: flex;
   justify-content: center;
@@ -43737,8 +43737,8 @@
   };
   var Tab_default = Tab;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-OLwABFbtN419\qrcg\src\components\Tabs\Tabs.module.css.js
-  var digest3 = "16d26f6852e532360d19530a7aae0f94917ec556f97b11a9e6f07746ffd6c68e";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-3wCSbqddNjtJ\qrcg\src\components\Tabs\Tabs.module.css.js
+  var digest3 = "f70699c1639b8059fc985c9030edb2290324d6f4ece4dd48bb45b42202c1074b";
   var css3 = `._tabsContainer_1c7cu_1 {
   display: flex;
   flex-direction: column;
@@ -43907,8 +43907,8 @@
   };
   var valideURL_default = validURL;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-VLVJK7LgKUsE\qrcg\src\components\QrScanner\QrScanner.module.css.js
-  var digest4 = "cbc7379391f05e13ccdf0bfc01f27a8009dc597d17f892812a5a6094d6d72111";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-gYNz9XCmRzFr\qrcg\src\components\QrScanner\QrScanner.module.css.js
+  var digest4 = "38018f9ab577916231a60f79eac246d40ba7015b801c933567626904a7cd8edc";
   var css4 = `._qrScannerResult_qakdg_1 {
   display: flex;
   justify-content: center;
@@ -44672,8 +44672,8 @@
   var import_react44 = __toESM(require_react());
   var import_classnames3 = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-1tJaJBmMxXks\qrcg\src\components\Input\Input.module.css.js
-  var digest5 = "9daf966f86bdbc8f9a0e34f183314ca725b8df5e7b61d8f6a111b56350470cf1";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-lDqlnjz4ASqB\qrcg\src\components\Input\Input.module.css.js
+  var digest5 = "fce78c21d5c526e3af2091c5544d98a09ebe58bd615594f60ab7b50a680ab152";
   var css5 = `._inputContainer_1ny69_1 {
   display: flex;
   flex-direction: column;
@@ -44773,8 +44773,8 @@
   var import_react45 = __toESM(require_react());
   var import_classnames4 = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-8jA4THHCpaN4\qrcg\src\components\Button\Button.module.css.js
-  var digest6 = "ecac0ab220f075befbe7b5fe287d5548025f7425bf15c730166ce71d11cdbeb3";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-H81ZFVELlFHT\qrcg\src\components\Button\Button.module.css.js
+  var digest6 = "c8dca94f4891e239a1e829bab1a568a718bcd34339174e268193bbb84aaf279d";
   var css6 = `._buttonBox_d6f2y_1 {
   display: flex;
   justify-content: center;
@@ -44863,8 +44863,8 @@
   };
   var Button_default = Button;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-1C8Z113vyF9d\qrcg\src\QrGenerator\QrGenerator.module.css.js
-  var digest7 = "fed2e7c1385c5a4df5b2beb36c4ad2cc994c5b47bf4171b42970f9030b7c497e";
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-YpqI8sV3wprJ\qrcg\src\QrGenerator\QrGenerator.module.css.js
+  var digest7 = "f5a28077042d129db1c94d82decea1cd58939153ab2513caad006c84796a6858";
   var css7 = `._qrGeneratorContainer_19tds_1 {
   display: flex;
   flex-direction: column;
@@ -44956,7 +44956,7 @@
     const [onImageDownload] = useImageDownload_default();
     const { width } = useWindowSize_default();
     (0, import_react46.useEffect)(() => {
-      if (width <= 327) {
+      if (width <= 375) {
         setSize(128 /* XS */);
       }
       if (width >= 375 && width <= 768) {
@@ -45024,7 +45024,7 @@
   };
   var QrGenerator_default = QrGenerator;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-IdnCAaipXjsO\qrcg\src\pages\MainPage\MainPage.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-pZBRb1cE056b\qrcg\src\pages\MainPage\MainPage.module.css.js
   var digest8 = "ac03ecd9db01a6e3b348a49e69a3eb532a673856d16436710d0c00736d04373a";
   var css8 = `._mainPage_163uj_1 {
   display: flex;
@@ -45112,7 +45112,7 @@
   };
   var MainPage_default = MainPage;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-12552-vtlwfaO31fqF\qrcg\src\components\App\App.module.css.js
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-11364-59FRj85855wF\qrcg\src\components\App\App.module.css.js
   var digest9 = "13b859607ab1ae893a37437c6de0ed6ffd51f2bd9e3c3aae22093b2fe6840869";
   var css9 = `._appContainer_17u34_1 {
   width: 100%;
