@@ -2326,9 +2326,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React14 = require_react();
+          var React15 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React14.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React15.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -3849,7 +3849,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React14.Children.forEach(props.children, function(child) {
+                  React15.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -10051,9 +10051,9 @@
           }
           function getSuspenseInstanceFallbackErrorDetails(instance) {
             var dataset = instance.nextSibling && instance.nextSibling.dataset;
-            var digest9, message, stack;
+            var digest10, message, stack;
             if (dataset) {
-              digest9 = dataset.dgst;
+              digest10 = dataset.dgst;
               {
                 message = dataset.msg;
                 stack = dataset.stck;
@@ -10062,7 +10062,7 @@
             {
               return {
                 message,
-                digest: digest9,
+                digest: digest10,
                 stack
               };
             }
@@ -12010,7 +12010,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React14.Component().refs;
+          var emptyRefsObject = new React15.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -15425,12 +15425,12 @@
               digest: null
             };
           }
-          function createCapturedValue(value, digest9, stack) {
+          function createCapturedValue(value, digest10, stack) {
             return {
               value,
               source: null,
               stack: stack != null ? stack : null,
-              digest: digest9 != null ? digest9 : null
+              digest: digest10 != null ? digest10 : null
             };
           }
           function showErrorDialog(boundary, errorInfo) {
@@ -16704,10 +16704,10 @@
                 );
               }
               if (isSuspenseInstanceFallback(suspenseInstance)) {
-                var digest9, message, stack;
+                var digest10, message, stack;
                 {
                   var _getSuspenseInstanceF = getSuspenseInstanceFallbackErrorDetails(suspenseInstance);
-                  digest9 = _getSuspenseInstanceF.digest;
+                  digest10 = _getSuspenseInstanceF.digest;
                   message = _getSuspenseInstanceF.message;
                   stack = _getSuspenseInstanceF.stack;
                 }
@@ -16717,7 +16717,7 @@
                 } else {
                   error2 = new Error("The server could not finish this Suspense boundary, likely due to an error during server rendering. Switched to client rendering.");
                 }
-                var capturedValue = createCapturedValue(error2, digest9, stack);
+                var capturedValue = createCapturedValue(error2, digest10, stack);
                 return retrySuspenseComponentWithoutHydrating(current2, workInProgress2, renderLanes2, capturedValue);
               }
               var hasContextChanged2 = includesSomeLane(renderLanes2, current2.childLanes);
@@ -20743,10 +20743,10 @@
               for (var i4 = 0; i4 < recoverableErrors.length; i4++) {
                 var recoverableError = recoverableErrors[i4];
                 var componentStack = recoverableError.stack;
-                var digest9 = recoverableError.digest;
+                var digest10 = recoverableError.digest;
                 onRecoverableError(recoverableError.value, {
                   componentStack,
-                  digest: digest9
+                  digest: digest10
                 });
               }
             }
@@ -23468,56 +23468,6 @@
     }
   });
 
-  // node_modules/classnames/index.js
-  var require_classnames = __commonJS({
-    "node_modules/classnames/index.js"(exports, module) {
-      (function() {
-        "use strict";
-        var hasOwn = {}.hasOwnProperty;
-        function classNames() {
-          var classes = [];
-          for (var i4 = 0; i4 < arguments.length; i4++) {
-            var arg = arguments[i4];
-            if (!arg)
-              continue;
-            var argType = typeof arg;
-            if (argType === "string" || argType === "number") {
-              classes.push(arg);
-            } else if (Array.isArray(arg)) {
-              if (arg.length) {
-                var inner = classNames.apply(null, arg);
-                if (inner) {
-                  classes.push(inner);
-                }
-              }
-            } else if (argType === "object") {
-              if (arg.toString === Object.prototype.toString) {
-                for (var key in arg) {
-                  if (hasOwn.call(arg, key) && arg[key]) {
-                    classes.push(key);
-                  }
-                }
-              } else {
-                classes.push(arg.toString());
-              }
-            }
-          }
-          return classes.join(" ");
-        }
-        if (typeof module !== "undefined" && module.exports) {
-          classNames.default = classNames;
-          module.exports = classNames;
-        } else if (typeof define === "function" && typeof define.amd === "object" && define.amd) {
-          define("classnames", [], function() {
-            return classNames;
-          });
-        } else {
-          window.classNames = classNames;
-        }
-      })();
-    }
-  });
-
   // node_modules/framer-motion/node_modules/@emotion/memoize/dist/memoize.browser.cjs.js
   var require_memoize_browser_cjs = __commonJS({
     "node_modules/framer-motion/node_modules/@emotion/memoize/dist/memoize.browser.cjs.js"(exports) {
@@ -23991,6 +23941,56 @@
         exporter("__classPrivateFieldSet", __classPrivateFieldSet2);
         exporter("__classPrivateFieldIn", __classPrivateFieldIn2);
       });
+    }
+  });
+
+  // node_modules/classnames/index.js
+  var require_classnames = __commonJS({
+    "node_modules/classnames/index.js"(exports, module) {
+      (function() {
+        "use strict";
+        var hasOwn = {}.hasOwnProperty;
+        function classNames() {
+          var classes = [];
+          for (var i4 = 0; i4 < arguments.length; i4++) {
+            var arg = arguments[i4];
+            if (!arg)
+              continue;
+            var argType = typeof arg;
+            if (argType === "string" || argType === "number") {
+              classes.push(arg);
+            } else if (Array.isArray(arg)) {
+              if (arg.length) {
+                var inner = classNames.apply(null, arg);
+                if (inner) {
+                  classes.push(inner);
+                }
+              }
+            } else if (argType === "object") {
+              if (arg.toString === Object.prototype.toString) {
+                for (var key in arg) {
+                  if (hasOwn.call(arg, key) && arg[key]) {
+                    classes.push(key);
+                  }
+                }
+              } else {
+                classes.push(arg.toString());
+              }
+            }
+          }
+          return classes.join(" ");
+        }
+        if (typeof module !== "undefined" && module.exports) {
+          classNames.default = classNames;
+          module.exports = classNames;
+        } else if (typeof define === "function" && typeof define.amd === "object" && define.amd) {
+          define("classnames", [], function() {
+            return classNames;
+          });
+        } else {
+          window.classNames = classNames;
+        }
+      })();
     }
   });
 
@@ -35858,8 +35858,8 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React14 = require_react();
-          var ReactSharedInternals = React14.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var React15 = require_react();
+          var ReactSharedInternals = React15.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -35889,13 +35889,13 @@
             return x3 === y3 && (x3 !== 0 || 1 / x3 === 1 / y3) || x3 !== x3 && y3 !== y3;
           }
           var objectIs = typeof Object.is === "function" ? Object.is : is;
-          var useState6 = React14.useState, useEffect15 = React14.useEffect, useLayoutEffect2 = React14.useLayoutEffect, useDebugValue2 = React14.useDebugValue;
+          var useState6 = React15.useState, useEffect15 = React15.useEffect, useLayoutEffect2 = React15.useLayoutEffect, useDebugValue2 = React15.useDebugValue;
           var didWarnOld18Alpha = false;
           var didWarnUncachedGetSnapshot = false;
           function useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot) {
             {
               if (!didWarnOld18Alpha) {
-                if (React14.startTransition !== void 0) {
+                if (React15.startTransition !== void 0) {
                   didWarnOld18Alpha = true;
                   error("You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release.");
                 }
@@ -35960,7 +35960,7 @@
           var canUseDOM = !!(typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined");
           var isServerEnvironment = !canUseDOM;
           var shim = isServerEnvironment ? useSyncExternalStore$1 : useSyncExternalStore;
-          var useSyncExternalStore$2 = React14.useSyncExternalStore !== void 0 ? React14.useSyncExternalStore : shim;
+          var useSyncExternalStore$2 = React15.useSyncExternalStore !== void 0 ? React15.useSyncExternalStore : shim;
           exports.useSyncExternalStore = useSyncExternalStore$2;
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
@@ -35992,14 +35992,14 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React14 = require_react();
+          var React15 = require_react();
           var shim = require_shim();
           function is(x3, y3) {
             return x3 === y3 && (x3 !== 0 || 1 / x3 === 1 / y3) || x3 !== x3 && y3 !== y3;
           }
           var objectIs = typeof Object.is === "function" ? Object.is : is;
           var useSyncExternalStore = shim.useSyncExternalStore;
-          var useRef11 = React14.useRef, useEffect15 = React14.useEffect, useMemo5 = React14.useMemo, useDebugValue2 = React14.useDebugValue;
+          var useRef11 = React15.useRef, useEffect15 = React15.useEffect, useMemo5 = React15.useMemo, useDebugValue2 = React15.useDebugValue;
           function useSyncExternalStoreWithSelector2(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
             var instRef = useRef11(null);
             var inst;
@@ -36085,7 +36085,7 @@
   });
 
   // src/index.tsx
-  var import_react48 = __toESM(require_react());
+  var import_react49 = __toESM(require_react());
   var import_client = __toESM(require_client());
 
   // node_modules/styled-components/dist/styled-components.browser.esm.js
@@ -37305,14 +37305,10 @@
   var templateObject_2;
 
   // src/components/App/App.tsx
-  var import_react47 = __toESM(require_react());
+  var import_react48 = __toESM(require_react());
 
   // src/pages/MainPage/MainPage.tsx
-  var import_react46 = __toESM(require_react());
-  var import_classnames5 = __toESM(require_classnames());
-
-  // src/components/Tabs/Tabs.tsx
-  var import_react35 = __toESM(require_react());
+  var import_react47 = __toESM(require_react());
 
   // node_modules/framer-motion/dist/es/motion/index.mjs
   var React = __toESM(require_react(), 1);
@@ -43511,16 +43507,121 @@
     return React4.createElement(React4.Fragment, null, exiting.size ? childrenToRender : childrenToRender.map((child) => (0, import_react33.cloneElement)(child)));
   };
 
+  // src/pages/MainPage/MainPage.tsx
+  var import_classnames5 = __toESM(require_classnames());
+
+  // src/components/SplashScreen/SplashScreen.tsx
+  var import_react34 = __toESM(require_react());
+
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-w3b4619Nw02v\qrcg\src\components\SplashScreen\SplashScreen.module.css.js
+  var digest = "6bb3d0b44e6e062c1ca044f66ded8d424354e5e791c47c68ec6900eedac14f53";
+  var css = `._splashBox_nm52j_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+._splashIconBox_nm52j_19 {
+  display: block;
+
+  width: 200px;
+  height: 200px;
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: _animateBgColor_nm52j_1;
+  animation-timing-function: linear;
+  background-color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3) 8%,
+    rgba(255, 255, 255, 0.8) 18%,
+    rgba(255, 255, 255, 0.3) 33%
+  );
+  background-size: 750px 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  ._splashIconBox_nm52j_19 {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  ._splashIconBox_nm52j_19 {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  ._splashIconBox_nm52j_19 {
+    width: 750px;
+    height: 750px;
+  }
+}
+
+._splashIcon_nm52j_19 {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes _animateBgColor_nm52j_1 {
+  0% {
+    background-position: -750px 0;
+  }
+  100% {
+    background-position: 750px 0;
+  }
+}
+`;
+  (function() {
+    if (typeof document === "undefined") {
+      return;
+    }
+    if (!document.getElementById(digest)) {
+      var el = document.createElement("style");
+      el.id = digest;
+      el.textContent = css;
+      document.head.appendChild(el);
+    }
+  })();
+  var SplashScreen_module_css_default = { "splashBox": "_splashBox_nm52j_1", "splashIconBox": "_splashIconBox_nm52j_19", "animateBgColor": "_animateBgColor_nm52j_1", "splashIcon": "_splashIcon_nm52j_19" };
+
+  // src/components/SplashScreen/SplashScreen.tsx
+  var SplashScreen = () => {
+    return /* @__PURE__ */ import_react34.default.createElement("div", {
+      className: SplashScreen_module_css_default.splashBox
+    }, /* @__PURE__ */ import_react34.default.createElement("div", {
+      className: SplashScreen_module_css_default.splashIconBox
+    }, /* @__PURE__ */ import_react34.default.createElement("img", {
+      className: SplashScreen_module_css_default.splashIcon,
+      src: "assets/images/qr-code-icon-01.png",
+      alt: "Qr Code Icon"
+    })));
+  };
+  var SplashScreen_default = SplashScreen;
+
   // src/components/Tabs/Tabs.tsx
+  var import_react36 = __toESM(require_react());
   var import_classnames2 = __toESM(require_classnames());
 
   // src/components/Tab/Tab.tsx
-  var import_react34 = __toESM(require_react());
+  var import_react35 = __toESM(require_react());
   var import_classnames = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-qyYe4eqg5ajD\qrcg\src\components\Tab\Tab.module.css.js
-  var digest = "514fdd949355c836d716e625ea9134a42c230d21585331cb79361dfa1c17e746";
-  var css = `._tabButton_18ik0_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-xveMXfCmejOc\qrcg\src\components\Tab\Tab.module.css.js
+  var digest2 = "dfad33b40fcac36a579427d01bc07ff263c1a5484ed525022d19c773ad0fe354";
+  var css2 = `._tabButton_18ik0_1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43604,10 +43705,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest)) {
+    if (!document.getElementById(digest2)) {
       var el = document.createElement("style");
-      el.id = digest;
-      el.textContent = css;
+      el.id = digest2;
+      el.textContent = css2;
       document.head.appendChild(el);
     }
   })();
@@ -43620,25 +43721,25 @@
     iconSrc,
     onClick
   }) => {
-    return /* @__PURE__ */ import_react34.default.createElement("button", {
+    return /* @__PURE__ */ import_react35.default.createElement("button", {
       className: (0, import_classnames.default)(Tab_module_css_default.tabButton, {
         [Tab_module_css_default.tabButtonActive]: isActive
       }),
       onClick,
       type: "button"
-    }, /* @__PURE__ */ import_react34.default.createElement("img", {
+    }, /* @__PURE__ */ import_react35.default.createElement("img", {
       className: Tab_module_css_default.tabButtonIcon,
       src: iconSrc,
       alt: tabName
-    }), /* @__PURE__ */ import_react34.default.createElement("p", {
+    }), /* @__PURE__ */ import_react35.default.createElement("p", {
       className: Tab_module_css_default.tabButtonText
     }, tabName));
   };
   var Tab_default = Tab;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-1bsnbTf4qw2I\qrcg\src\components\Tabs\Tabs.module.css.js
-  var digest2 = "16d26f6852e532360d19530a7aae0f94917ec556f97b11a9e6f07746ffd6c68e";
-  var css2 = `._tabsContainer_1c7cu_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-5igunfouWBPS\qrcg\src\components\Tabs\Tabs.module.css.js
+  var digest3 = "16d26f6852e532360d19530a7aae0f94917ec556f97b11a9e6f07746ffd6c68e";
+  var css3 = `._tabsContainer_1c7cu_1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43680,10 +43781,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest2)) {
+    if (!document.getElementById(digest3)) {
       var el = document.createElement("style");
-      el.id = digest2;
-      el.textContent = css2;
+      el.id = digest3;
+      el.textContent = css3;
       document.head.appendChild(el);
     }
   })();
@@ -43692,34 +43793,34 @@
   // src/components/Tabs/Tabs.tsx
   var Tabs = (_a) => {
     var _b = _a, { tabs, className } = _b, props = __objRest(_b, ["tabs", "className"]);
-    const [activeTab, setActiveTab] = (0, import_react35.useState)("tab1");
+    const [activeTab, setActiveTab] = (0, import_react36.useState)("tab1");
     const onTabButtonClick = (tabId) => {
       setActiveTab(tabId);
     };
-    return /* @__PURE__ */ import_react35.default.createElement("div", __spreadValues({
+    return /* @__PURE__ */ import_react36.default.createElement("div", __spreadValues({
       className: (0, import_classnames2.default)(Tabs_module_css_default.tabsContainer, className)
-    }, props), /* @__PURE__ */ import_react35.default.createElement("div", {
+    }, props), /* @__PURE__ */ import_react36.default.createElement("div", {
       className: Tabs_module_css_default.tabsButtons
     }, tabs.map(({ tabId, tabName, iconSrc }) => {
-      return /* @__PURE__ */ import_react35.default.createElement(Tab_default, {
+      return /* @__PURE__ */ import_react36.default.createElement(Tab_default, {
         key: tabId,
         tabName,
         iconSrc,
         isActive: tabId === activeTab,
         onClick: () => onTabButtonClick(tabId)
       });
-    })), /* @__PURE__ */ import_react35.default.createElement("div", {
+    })), /* @__PURE__ */ import_react36.default.createElement("div", {
       className: Tabs_module_css_default.tabsContent
-    }, /* @__PURE__ */ import_react35.default.createElement(AnimatePresence, {
+    }, /* @__PURE__ */ import_react36.default.createElement(AnimatePresence, {
       mode: "wait"
-    }, /* @__PURE__ */ import_react35.default.createElement(motion.div, {
+    }, /* @__PURE__ */ import_react36.default.createElement(motion.div, {
       key: activeTab,
       initial: { x: -100, opacity: 0 },
       animate: { x: 0, opacity: 1 },
       exit: { x: -100, opacity: 0 },
       transition: { duration: 0.5 }
     }, tabs.map(({ tabId, render }) => {
-      return /* @__PURE__ */ import_react35.default.createElement(import_react35.Fragment, {
+      return /* @__PURE__ */ import_react36.default.createElement(import_react36.Fragment, {
         key: tabId
       }, tabId === activeTab && render());
     })))));
@@ -43727,10 +43828,10 @@
   var Tabs_default = Tabs;
 
   // src/components/QrScanner/QrScanner.tsx
-  var import_react37 = __toESM(require_react());
+  var import_react38 = __toESM(require_react());
 
   // node_modules/react-qrcode-scanner/dist/index.es.js
-  var import_react36 = __toESM(require_react());
+  var import_react37 = __toESM(require_react());
   var import_jsqr = __toESM(require_jsQR());
   var i2 = () => {
     (void 0).name = "NoVideoInputDevicesError", (void 0).message = "No video input devices found";
@@ -43740,7 +43841,7 @@
   var r2 = ({ onError: r4 = (e3) => console.log({ error: e3 }), onScan: a4 = (e3) => console.log({ value: e3 }), facingMode: s3 = "environment", constraints: c4 = null, onLoad: d3 = () => null, flipHorizontally: l3 = false, style: v3, className: m2, showViewFinder: g3 = true, delay: h3 = 800, resolution: u3 = 600, video: p2 = { width: "50%", height: "85%" }, viewFinder: f2 = { border: "12px solid rgba(255,255,255,0.3)", position: "absolute", borderRadius: "5px", width: "250px", height: "250px" } }) => {
     const w3 = {};
     let b4, y3;
-    (0, import_react36.useEffect)(() => (E3(), () => {
+    (0, import_react37.useEffect)(() => (E3(), () => {
       b4 && clearTimeout(b4), y3 && y3();
     }), []);
     const E3 = () => {
@@ -43793,7 +43894,7 @@
       } else
         b4 = setTimeout(R3, h3);
     }, D3 = (e3) => (t4) => w3[e3] = t4, I3 = { ...p2, backgroundColor: "red", overflow: "hidden" }, O3 = { top: 0, left: 0, right: 0, bottom: 0, margin: "auto auto auto auto" }, U3 = { ...O3, ...p2, display: "block", position: "absolute", overflow: "hidden", objectFit: "cover", transform: l3 ? "scaleX(1)" : "scaleX(-1)" }, x3 = { ...O3, ...f2, zIndex: 10, position: "absolute" };
-    return import_react36.default.createElement("section", { className: m2, style: v3 }, import_react36.default.createElement("section", { style: I3 }, g3 ? import_react36.default.createElement("div", { style: x3 }) : null, import_react36.default.createElement("video", { style: U3, ref: D3("preview") }), import_react36.default.createElement("canvas", { style: { display: "none" }, ref: D3("canvas") })));
+    return import_react37.default.createElement("section", { className: m2, style: v3 }, import_react37.default.createElement("section", { style: I3 }, g3 ? import_react37.default.createElement("div", { style: x3 }) : null, import_react37.default.createElement("video", { style: U3, ref: D3("preview") }), import_react37.default.createElement("canvas", { style: { display: "none" }, ref: D3("canvas") })));
   };
 
   // src/helpers/valideURL.ts
@@ -43806,9 +43907,9 @@
   };
   var valideURL_default = validURL;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-AiDHKaE6dhvS\qrcg\src\components\QrScanner\QrScanner.module.css.js
-  var digest3 = "6d328941003c4326d76917a753fc0f7e1a11fb08cc8a664c4dc0001e95712c6a";
-  var css3 = `._qrScannerResult_qakdg_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-WSYuvJD3QvqE\qrcg\src\components\QrScanner\QrScanner.module.css.js
+  var digest4 = "12f753b960c301ec9d72cd385ca16754129410aaff20451ac12ec0d3e8773b25";
+  var css4 = `._qrScannerResult_qakdg_1 {
   display: flex;
   justify-content: center;
 }
@@ -43924,10 +44025,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest3)) {
+    if (!document.getElementById(digest4)) {
       var el = document.createElement("style");
-      el.id = digest3;
-      el.textContent = css3;
+      el.id = digest4;
+      el.textContent = css4;
       document.head.appendChild(el);
     }
   })();
@@ -43935,8 +44036,8 @@
 
   // src/components/QrScanner/QrScanner.tsx
   var QrScanner = () => {
-    const [qrCodeValue, setQrCodeValue] = (0, import_react37.useState)("");
-    const [startScan, setStartScan] = (0, import_react37.useState)(false);
+    const [qrCodeValue, setQrCodeValue] = (0, import_react38.useState)("");
+    const [startScan, setStartScan] = (0, import_react38.useState)(false);
     const handleScan = (value) => {
       setQrCodeValue(value);
     };
@@ -43954,34 +44055,34 @@
       }
     };
     const isQrCodeContainsURL = valideURL_default(qrCodeValue);
-    return /* @__PURE__ */ import_react37.default.createElement(import_react37.default.Fragment, null, startScan ? /* @__PURE__ */ import_react37.default.createElement(motion.div, {
+    return /* @__PURE__ */ import_react38.default.createElement(import_react38.default.Fragment, null, startScan ? /* @__PURE__ */ import_react38.default.createElement(motion.div, {
       initial: { opacity: 0, scale: 0.5 },
       animate: { opacity: 1, scale: 1 },
       transition: { duration: 0.5 }
-    }, /* @__PURE__ */ import_react37.default.createElement("div", {
+    }, /* @__PURE__ */ import_react38.default.createElement("div", {
       className: QrScanner_module_css_default.qrScannerResult
-    }, qrCodeValue && isQrCodeContainsURL ? /* @__PURE__ */ import_react37.default.createElement(motion.a, {
+    }, qrCodeValue && isQrCodeContainsURL ? /* @__PURE__ */ import_react38.default.createElement(motion.a, {
       variants: qrCodeValueAnimation,
       initial: "hidden",
       animate: "show",
       className: QrScanner_module_css_default.qrScannerResultLink,
       href: qrCodeValue,
       target: "_blank"
-    }, qrCodeValue) : /* @__PURE__ */ import_react37.default.createElement(motion.p, {
+    }, qrCodeValue) : /* @__PURE__ */ import_react38.default.createElement(motion.p, {
       variants: qrCodeValueAnimation,
       initial: "hidden",
       animate: "show",
       className: QrScanner_module_css_default.qrScannerResultText
-    }, qrCodeValue)), /* @__PURE__ */ import_react37.default.createElement("div", {
+    }, qrCodeValue)), /* @__PURE__ */ import_react38.default.createElement("div", {
       className: QrScanner_module_css_default.qrScannerContainer
-    }, /* @__PURE__ */ import_react37.default.createElement(r2, {
+    }, /* @__PURE__ */ import_react38.default.createElement(r2, {
       onScan: handleScan,
       onError: handleError,
       video: { width: "100%", height: "100%" },
       facingMode: "environment",
       flipHorizontally: true,
       className: QrScanner_module_css_default.qrScannerBox
-    }))) : /* @__PURE__ */ import_react37.default.createElement(motion.button, {
+    }))) : /* @__PURE__ */ import_react38.default.createElement(motion.button, {
       className: QrScanner_module_css_default.qrScannerStartScanButton,
       onClick: onStartScanButtonClick,
       type: "button",
@@ -43993,7 +44094,7 @@
   var QrScanner_default = QrScanner;
 
   // src/QrGenerator/QrGenerator.tsx
-  var import_react45 = __toESM(require_react());
+  var import_react46 = __toESM(require_react());
   var import_react_qr_code = __toESM(require_lib());
 
   // node_modules/react-use/esm/misc/util.js
@@ -44018,19 +44119,19 @@
   var isBrowser2 = typeof window !== "undefined";
 
   // node_modules/react-use/esm/useEffectOnce.js
-  var import_react38 = __toESM(require_react());
+  var import_react39 = __toESM(require_react());
   var useEffectOnce = function(effect) {
-    (0, import_react38.useEffect)(effect, []);
+    (0, import_react39.useEffect)(effect, []);
   };
   var useEffectOnce_default = useEffectOnce;
 
   // node_modules/react-use/esm/useRafState.js
-  var import_react40 = __toESM(require_react());
+  var import_react41 = __toESM(require_react());
 
   // node_modules/react-use/esm/useUnmount.js
-  var import_react39 = __toESM(require_react());
+  var import_react40 = __toESM(require_react());
   var useUnmount = function(fn2) {
-    var fnRef = (0, import_react39.useRef)(fn2);
+    var fnRef = (0, import_react40.useRef)(fn2);
     fnRef.current = fn2;
     useEffectOnce_default(function() {
       return function() {
@@ -44042,9 +44143,9 @@
 
   // node_modules/react-use/esm/useRafState.js
   var useRafState = function(initialState) {
-    var frame2 = (0, import_react40.useRef)(0);
-    var _a = (0, import_react40.useState)(initialState), state = _a[0], setState = _a[1];
-    var setRafState = (0, import_react40.useCallback)(function(value) {
+    var frame2 = (0, import_react41.useRef)(0);
+    var _a = (0, import_react41.useState)(initialState), state = _a[0], setState = _a[1];
+    var setRafState = (0, import_react41.useCallback)(function(value) {
       cancelAnimationFrame(frame2.current);
       frame2.current = requestAnimationFrame(function() {
         setState(value);
@@ -44058,7 +44159,7 @@
   var useRafState_default = useRafState;
 
   // node_modules/react-use/esm/useWindowSize.js
-  var import_react41 = __toESM(require_react());
+  var import_react42 = __toESM(require_react());
   var useWindowSize = function(initialWidth, initialHeight) {
     if (initialWidth === void 0) {
       initialWidth = Infinity;
@@ -44070,7 +44171,7 @@
       width: isBrowser2 ? window.innerWidth : initialWidth,
       height: isBrowser2 ? window.innerHeight : initialHeight
     }), state = _a[0], setState = _a[1];
-    (0, import_react41.useEffect)(function() {
+    (0, import_react42.useEffect)(function() {
       if (isBrowser2) {
         var handler_1 = function() {
           setState({
@@ -44141,7 +44242,7 @@
   var createStore = (createState2) => createState2 ? createStoreImpl(createState2) : createStoreImpl;
 
   // node_modules/zustand/esm/index.mjs
-  var import_react42 = __toESM(require_react(), 1);
+  var import_react43 = __toESM(require_react(), 1);
   var import_with_selector = __toESM(require_with_selector(), 1);
   var { useSyncExternalStoreWithSelector } = import_with_selector.default;
   function useStore(api, selector = api.getState, equalityFn) {
@@ -44152,7 +44253,7 @@
       selector,
       equalityFn
     );
-    (0, import_react42.useDebugValue)(slice);
+    (0, import_react43.useDebugValue)(slice);
     return slice;
   }
   var createImpl = (createState2) => {
@@ -44568,12 +44669,12 @@
   var qrGenerator_default = useQrGeneratorStore;
 
   // src/components/Input/Input.tsx
-  var import_react43 = __toESM(require_react());
+  var import_react44 = __toESM(require_react());
   var import_classnames3 = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-1whrr2XHG00d\qrcg\src\components\Input\Input.module.css.js
-  var digest4 = "5e2c432dea3ee7279edfebb6200efe7b89555992971824f957712d4c63275b7a";
-  var css4 = `._inputContainer_1ny69_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-pEhbOAUcDQLq\qrcg\src\components\Input\Input.module.css.js
+  var digest5 = "cafeb88f3d3faa43b63e164a564478b4c4379310dc38354d99070e95d793b5be";
+  var css5 = `._inputContainer_1ny69_1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44639,10 +44740,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest4)) {
+    if (!document.getElementById(digest5)) {
       var el = document.createElement("style");
-      el.id = digest4;
-      el.textContent = css4;
+      el.id = digest5;
+      el.textContent = css5;
       document.head.appendChild(el);
     }
   })();
@@ -44655,9 +44756,9 @@
     const onInputChange = (e3) => {
       setValue(e3.target.value);
     };
-    return /* @__PURE__ */ import_react43.default.createElement("div", __spreadValues({
+    return /* @__PURE__ */ import_react44.default.createElement("div", __spreadValues({
       className: (0, import_classnames3.default)(Input_module_css_default.inputContainer, className)
-    }, props), /* @__PURE__ */ import_react43.default.createElement("input", {
+    }, props), /* @__PURE__ */ import_react44.default.createElement("input", {
       type: "text",
       value,
       onChange: (e3) => onInputChange(e3),
@@ -44669,12 +44770,12 @@
   var Input_default = Input;
 
   // src/components/Button/Button.tsx
-  var import_react44 = __toESM(require_react());
+  var import_react45 = __toESM(require_react());
   var import_classnames4 = __toESM(require_classnames());
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-oa3xuLjsV2Ww\qrcg\src\components\Button\Button.module.css.js
-  var digest5 = "5e6717e267614b509a69d6fa9ff9c882c006944582a43b1dd45e8b4642278f16";
-  var css5 = `._buttonBox_d6f2y_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-Aa16ymB7sNra\qrcg\src\components\Button\Button.module.css.js
+  var digest6 = "69ab863c10f9ddf7657ad3a26830ade26b0f346cb2b1ec2e49ad78714e026f05";
+  var css6 = `._buttonBox_d6f2y_1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44732,10 +44833,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest5)) {
+    if (!document.getElementById(digest6)) {
       var el = document.createElement("style");
-      el.id = digest5;
-      el.textContent = css5;
+      el.id = digest6;
+      el.textContent = css6;
       document.head.appendChild(el);
     }
   })();
@@ -44752,7 +44853,7 @@
       "isActive",
       "className"
     ]);
-    return /* @__PURE__ */ import_react44.default.createElement("button", __spreadProps(__spreadValues({
+    return /* @__PURE__ */ import_react45.default.createElement("button", __spreadProps(__spreadValues({
       className: (0, import_classnames4.default)(Button_module_css_default.buttonBox, className, {
         [Button_module_css_default.buttonBoxActive]: isActive
       })
@@ -44762,9 +44863,9 @@
   };
   var Button_default = Button;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-kHcXCcZ4jyiZ\qrcg\src\QrGenerator\QrGenerator.module.css.js
-  var digest6 = "e03f8ce48aa3122d05f1d59e494071c29c5ec37c3bf599ee5315a162e919f1a9";
-  var css6 = `._qrGeneratorContainer_145bj_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-ZIEYSr4vsMMU\qrcg\src\QrGenerator\QrGenerator.module.css.js
+  var digest7 = "086c1b21c1f64bfb323212f5800046e9f87e4c741ee76a75d174328cf3761236";
+  var css7 = `._qrGeneratorContainer_145bj_1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44837,10 +44938,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest6)) {
+    if (!document.getElementById(digest7)) {
       var el = document.createElement("style");
-      el.id = digest6;
-      el.textContent = css6;
+      el.id = digest7;
+      el.textContent = css7;
       document.head.appendChild(el);
     }
   })();
@@ -44851,7 +44952,7 @@
     const { value, size, setSize } = qrGenerator_default();
     const [onImageDownload] = useImageDownload_default();
     const { width } = useWindowSize_default();
-    (0, import_react45.useEffect)(() => {
+    (0, import_react46.useEffect)(() => {
       if (width <= 327) {
         setSize(128 /* XS */);
       }
@@ -44865,7 +44966,7 @@
         setSize(1024 /* LG */);
       }
     }, [width]);
-    (0, import_react45.useEffect)(() => {
+    (0, import_react46.useEffect)(() => {
       setSize(256 /* SM */);
     }, []);
     const on128ButtonClick = () => {
@@ -44880,39 +44981,39 @@
     const on1024ButtonClick = () => {
       setSize(1024 /* LG */);
     };
-    return /* @__PURE__ */ import_react45.default.createElement(motion.div, {
+    return /* @__PURE__ */ import_react46.default.createElement(motion.div, {
       initial: { opacity: 0, scale: 0.5 },
       animate: { opacity: 1, scale: 1 },
       transition: { duration: 0.5 },
       className: QrGenerator_module_css_default.qrGeneratorContainer
-    }, /* @__PURE__ */ import_react45.default.createElement("div", {
+    }, /* @__PURE__ */ import_react46.default.createElement("div", {
       className: QrGenerator_module_css_default.qrGeneratorSettingBox
-    }, /* @__PURE__ */ import_react45.default.createElement(Input_default, null), /* @__PURE__ */ import_react45.default.createElement("div", {
+    }, /* @__PURE__ */ import_react46.default.createElement(Input_default, null), /* @__PURE__ */ import_react46.default.createElement("div", {
       className: QrGenerator_module_css_default.qrGeneratorSizeButtonsBox
-    }, /* @__PURE__ */ import_react45.default.createElement(Button_default, {
+    }, /* @__PURE__ */ import_react46.default.createElement(Button_default, {
       onClick: on128ButtonClick,
       text: "128x128",
       isActive: 128 /* XS */ === size
-    }), /* @__PURE__ */ import_react45.default.createElement(Button_default, {
+    }), /* @__PURE__ */ import_react46.default.createElement(Button_default, {
       onClick: on256ButtonClick,
       text: "256x256",
       isActive: 256 /* SM */ === size
-    }), width > 768 && /* @__PURE__ */ import_react45.default.createElement(Button_default, {
+    }), width > 768 && /* @__PURE__ */ import_react46.default.createElement(Button_default, {
       onClick: on512ButtonClick,
       text: "512x512",
       isActive: 512 /* MD */ === size
-    }), width > 1200 && /* @__PURE__ */ import_react45.default.createElement(Button_default, {
+    }), width > 1200 && /* @__PURE__ */ import_react46.default.createElement(Button_default, {
       onClick: on1024ButtonClick,
       text: "1024x1024",
       isActive: 1024 /* LG */ === size
-    }))), /* @__PURE__ */ import_react45.default.createElement("div", {
+    }))), /* @__PURE__ */ import_react46.default.createElement("div", {
       className: QrGenerator_module_css_default.qrGeneratorCodeBox,
       style: { width: `${size}px` }
-    }, /* @__PURE__ */ import_react45.default.createElement(import_react_qr_code.default, {
+    }, /* @__PURE__ */ import_react46.default.createElement(import_react_qr_code.default, {
       id: "QRCode",
       value,
       size
-    })), /* @__PURE__ */ import_react45.default.createElement(Button_default, {
+    })), /* @__PURE__ */ import_react46.default.createElement(Button_default, {
       onClick: onImageDownload,
       className: QrGenerator_module_css_default.qrGeneratorDownloadButton,
       text: "Download QR Code"
@@ -44920,9 +45021,9 @@
   };
   var QrGenerator_default = QrGenerator;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-OF2MDWVpPStR\qrcg\src\pages\MainPage\MainPage.module.css.js
-  var digest7 = "ac03ecd9db01a6e3b348a49e69a3eb532a673856d16436710d0c00736d04373a";
-  var css7 = `._mainPage_163uj_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-HU4qROTKZ6bD\qrcg\src\pages\MainPage\MainPage.module.css.js
+  var digest8 = "ac03ecd9db01a6e3b348a49e69a3eb532a673856d16436710d0c00736d04373a";
+  var css8 = `._mainPage_163uj_1 {
   display: flex;
   justify-content: center;
 
@@ -44948,10 +45049,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest7)) {
+    if (!document.getElementById(digest8)) {
       var el = document.createElement("style");
-      el.id = digest7;
-      el.textContent = css7;
+      el.id = digest8;
+      el.textContent = css8;
       document.head.appendChild(el);
     }
   })();
@@ -44959,17 +45060,17 @@
 
   // src/pages/MainPage/MainPage.tsx
   var MainPage = () => {
-    const [showSplashScreen, setShowSplashScreen] = (0, import_react46.useState)(false);
-    const [showTabs, setShowTabs] = (0, import_react46.useState)(false);
-    (0, import_react46.useEffect)(() => {
+    const [showSplashScreen, setShowSplashScreen] = (0, import_react47.useState)(false);
+    const [showTabs, setShowTabs] = (0, import_react47.useState)(false);
+    (0, import_react47.useEffect)(() => {
       setShowSplashScreen(true);
       const timerSplash = setTimeout(() => {
         setShowSplashScreen(false);
         const timerTabs = setTimeout(() => {
           setShowTabs(true);
           clearTimeout(timerTabs);
-        }, 5e3);
-      }, 5e3);
+        }, 2750);
+      }, 2500);
       return () => {
         clearTimeout(timerSplash);
       };
@@ -44979,27 +45080,38 @@
         tabId: "tab1",
         tabName: "Create",
         iconSrc: "assets/images/create-icon-01.png",
-        render: () => /* @__PURE__ */ import_react46.default.createElement(QrGenerator_default, null)
+        render: () => /* @__PURE__ */ import_react47.default.createElement(QrGenerator_default, null)
       },
       {
         tabId: "tab2",
         tabName: "Scan",
         iconSrc: "assets/images/scan-qr-code-icon-01.png",
-        render: () => /* @__PURE__ */ import_react46.default.createElement(QrScanner_default, null)
+        render: () => /* @__PURE__ */ import_react47.default.createElement(QrScanner_default, null)
       }
     ];
-    return /* @__PURE__ */ import_react46.default.createElement("div", {
-      className: (0, import_classnames5.default)(MainPage_module_css_default.mainPage, {})
-    }, /* @__PURE__ */ import_react46.default.createElement(Tabs_default, {
+    return /* @__PURE__ */ import_react47.default.createElement("div", {
+      className: (0, import_classnames5.default)(MainPage_module_css_default.mainPage, {
+        [MainPage_module_css_default.mainPageBoxCenter]: !showTabs
+      })
+    }, /* @__PURE__ */ import_react47.default.createElement(AnimatePresence, null, showSplashScreen && /* @__PURE__ */ import_react47.default.createElement(motion.div, {
+      initial: { opacity: 0 },
+      animate: { opacity: 1 },
+      exit: { opacity: 0 },
+      transition: { duration: 2.5 }
+    }, /* @__PURE__ */ import_react47.default.createElement(SplashScreen_default, null))), showTabs && /* @__PURE__ */ import_react47.default.createElement(AnimatePresence, null, /* @__PURE__ */ import_react47.default.createElement(motion.div, {
+      initial: { opacity: 0 },
+      animate: { opacity: 1 },
+      transition: { duration: 2.5 }
+    }, /* @__PURE__ */ import_react47.default.createElement(Tabs_default, {
       tabs,
       className: MainPage_module_css_default.mainPageTabs
-    }));
+    }))));
   };
   var MainPage_default = MainPage;
 
-  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-5220-OyJaHcKenV6M\qrcg\src\components\App\App.module.css.js
-  var digest8 = "13b859607ab1ae893a37437c6de0ed6ffd51f2bd9e3c3aae22093b2fe6840869";
-  var css8 = `._appContainer_17u34_1 {
+  // esbuild-css-modules-plugin-namespace:C:\Users\VOLODY~1\AppData\Local\Temp\tmp-1064-oJNW02NnDbMU\qrcg\src\components\App\App.module.css.js
+  var digest9 = "13b859607ab1ae893a37437c6de0ed6ffd51f2bd9e3c3aae22093b2fe6840869";
+  var css9 = `._appContainer_17u34_1 {
   width: 100%;
   height: 100%;
 
@@ -45014,10 +45126,10 @@
     if (typeof document === "undefined") {
       return;
     }
-    if (!document.getElementById(digest8)) {
+    if (!document.getElementById(digest9)) {
       var el = document.createElement("style");
-      el.id = digest8;
-      el.textContent = css8;
+      el.id = digest9;
+      el.textContent = css9;
       document.head.appendChild(el);
     }
   })();
@@ -45025,9 +45137,9 @@
 
   // src/components/App/App.tsx
   var App = () => {
-    return /* @__PURE__ */ import_react47.default.createElement("div", {
+    return /* @__PURE__ */ import_react48.default.createElement("div", {
       className: App_module_css_default.appContainer
-    }, /* @__PURE__ */ import_react47.default.createElement(MainPage_default, null));
+    }, /* @__PURE__ */ import_react48.default.createElement(MainPage_default, null));
   };
 
   // src/index.css
@@ -45053,7 +45165,7 @@ body,
     document.getElementById("root")
   );
   root.render(
-    /* @__PURE__ */ import_react48.default.createElement(import_react48.default.StrictMode, null, /* @__PURE__ */ import_react48.default.createElement(Reset, null), /* @__PURE__ */ import_react48.default.createElement(App, null))
+    /* @__PURE__ */ import_react49.default.createElement(import_react49.default.StrictMode, null, /* @__PURE__ */ import_react49.default.createElement(Reset, null), /* @__PURE__ */ import_react49.default.createElement(App, null))
   );
 })();
 /*
