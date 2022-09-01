@@ -3,12 +3,12 @@ import QRCode from "react-qr-code";
 import { motion } from "framer-motion";
 import { useWindowSize } from "react-use";
 
-import useImageDownload from "../hooks/useImageDownload";
+import useImageDownload from "../../hooks/useImageDownload";
 
-import useQrGeneratorStore, { QRCodeSize } from "../state/qrGenerator";
+import useQrGeneratorStore, { QRCodeSize } from "../../state/qrGenerator";
 
-import Input from "../components/Input/Input";
-import Button from "../components/Button/Button";
+import Input from "../Input/Input";
+import Button from "../Button/Button";
 
 import styles from "./QrGenerator.module.css";
 
